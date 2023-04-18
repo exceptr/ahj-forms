@@ -1,11 +1,10 @@
-// TODO: write code here
+import Popover from "./modules/Popover";
+import PopoverHtml from "./modules/PopoverHtml";
 
-// comment this to pass build
-const unusedVariable = "variable";
+const container = document.querySelector(".container");
 
-// for demonstration purpose only
-export default function demo(value) {
-  return `Demo: ${value}`;
-}
+const popover = new PopoverHtml(container);
+popover.bindToDOM();
 
-console.log("app.js included");
+const popoverEl = new Popover();
+popoverEl.btnEventListener();
